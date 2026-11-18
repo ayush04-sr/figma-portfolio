@@ -1,0 +1,123 @@
+/* Basic CSS: selectors, colors, spacing, Flexbox, Grid and media queries */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: Roboto, Arial, sans-serif; color: #2d2d2d; background-color: #f0f0f6; font-size: 14px; }
+
+/* Header */
+.site-header { height: 78px; background-color: #fff; border-bottom: 3px solid #8548ff; border-left: 8px solid #8548ff; border-right: 2px solid #8548ff; display: flex; align-items: center; justify-content: space-between; padding: 0 7%; gap: 30px; }
+.brand img { width: 105px; height: 49px; object-fit: contain; }
+.navigation { display: flex; align-items: center; gap: 19px; }
+.navigation a { color: #111; text-decoration: none; font-size: 10px; padding: 7px 10px; border-radius: 4px; white-space: nowrap; }
+.navigation a.active, .navigation a:hover { background-color: #ffb400; }
+.menu-toggle { display: none; border: none; background-color: transparent; font-size: 24px; }
+
+/* Home */
+.hero { height: 414px; background-color: #fff; border-left: 8px solid #8548ff; border-right: 2px solid #8548ff; border-bottom: 3px solid #249dff; position: relative; overflow: hidden; display: flex; align-items: center; padding-left: 7%; }
+.hero-copy { position: relative; z-index: 2; width: 55%; max-width: 480px; }
+.hero-copy h1 { font-size: 34px; line-height: 1.12; font-weight: 700; white-space: nowrap; }
+.hero-copy h2 { font-size: 32px; line-height: 1.2; margin-bottom: 42px; white-space: nowrap; }
+.hero-copy h2 span { color: #ffb400; }
+.hero-copy p { font-size: 11px; line-height: 1.55; color: #888; max-width: 400px; margin-bottom: 67px; }
+.primary-button { display: inline-flex; align-items: center; gap: 12px; border: none; border-radius: 4px; background-color: #ffb400; color: #111; text-decoration: none; padding: 12px 21px; font-size: 10px; font-weight: 500; cursor: pointer; }
+.hero-art { position: absolute; width: 49%; height: 88%; right: 5%; bottom: 0; object-fit: contain; object-position: center bottom; }
+.decor { position: absolute; border: 1px solid #ffb400; width: 14px; height: 14px; transform: rotate(25deg); }
+.decor-circle { border-radius: 50%; top: 26px; left: 4%; }
+.decor-square { right: 10%; top: 65%; border-color: #1681ff; }
+
+/* Common section heading */
+.section { padding: 39px 7% 0; }
+.section-heading { text-align: left; margin-bottom: 28px; }
+.section-heading h2, .contact-section h2 { font-size: 22px; font-weight: 700; margin-bottom: 8px; }
+.section-heading p { font-size: 11px; line-height: 1.5; color: #85858d; }
+
+/* Projects */
+.projects-section { background-color: #f0f0f6; }
+.project-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px 28px; }
+.project-card { background-color: #fff; border: 1px solid #d4d4dc; border-radius: 9px; overflow: hidden; box-shadow: 0 3px 6px #00000012; }
+.project-card > img { width: 100%; height: 169px; display: block; object-fit: cover; }
+.project-content { padding: 10px 11px 12px; }
+.project-content h3 { font-size: 12px; font-weight: 500; margin-bottom: 5px; }
+.project-content p { font-size: 10px; line-height: 1.55; color: #85858d; margin-bottom: 7px; }
+.tags { display: flex; flex-wrap: wrap; gap: 5px; }
+.tags span { font-size: 9px; background-color: #eee; border-radius: 15px; padding: 3px 10px; color: #222; }
+
+/* Recommendations */
+.recommendations-section { padding-top: 40px; padding-bottom: 28px; }
+.recommendation-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.review-card { background-color: #fff; padding: 16px 17px; min-height: 215px; }
+.stars { color: #ffa800; letter-spacing: 3px; font-size: 18px; margin-bottom: 9px; }
+.review-card h3 { font-size: 12px; font-weight: 500; margin-bottom: 11px; }
+.review-card > p { font-size: 10px; line-height: 1.6; color: #85858d; margin-bottom: 14px; }
+.reviewer { display: flex; align-items: center; gap: 10px; }
+.reviewer img { width: 59px; height: 59px; object-fit: cover; border-radius: 50%; }
+.reviewer strong { display: block; font-size: 12px; font-weight: 500; margin-bottom: 4px; }
+.reviewer small { font-size: 10px; color: #888; }
+.slider-dots { display: flex; justify-content: flex-start; gap: 7px; margin-top: 28px; }
+.slider-dots i { width: 7px; height: 7px; background-color: #ffdb79; border-radius: 50%; }
+.slider-dots i.selected { background-color: #ffb400; }
+
+/* Contact */
+.contact-section { padding: 15px 7% 0; display: grid; grid-template-columns: 2.05fr 1fr; gap: 17px; }
+.contact-section h2 { margin-bottom: 29px; }
+.contact-form { background-color: #fff; padding: 18px 23px; }
+.contact-form label { display: block; font-size: 12px; color: #777; margin-bottom: 15px; }
+.contact-form input, .contact-form textarea { display: block; width: 100%; border: none; outline: none; background-color: #f0f0f6; border-radius: 4px; margin-top: 7px; padding: 10px; font: inherit; }
+.contact-form input { height: 34px; }
+.contact-form textarea { height: 138px; resize: vertical; }
+.contact-form .primary-button { margin-top: 0; }
+.contact-info h2 { text-align: left; }
+.info-card { background-color: #fff; padding: 19px 16px 12px; margin-bottom: 9px; min-height: 126px; }
+.info-icon { display: flex; align-items: center; justify-content: center; width: 27px; height: 27px; border-radius: 50%; background-color: #ffb400; margin: 0 0 18px; color: #222; font-size: 16px; }
+.info-card p { display: flex; justify-content: space-between; gap: 8px; font-size: 11px; color: #777; margin-bottom: 11px; }
+.info-card p:last-child { margin-bottom: 0; }
+.info-card b { font-weight: 400; }
+.info-card span:last-child { color: #888; text-align: right; }
+
+/* Partner logos */
+.partners { display: flex; align-items: center; justify-content: flex-start; gap: 80px; padding: 50px 7% 40px; }
+.partners img { width: 55px; height: 50px; object-fit: contain; mix-blend-mode: multiply; }
+
+/* Footer */
+.footer { display: grid; grid-template-columns: 1.7fr 1fr 1.1fr .7fr; gap: 35px; padding: 10px 7% 45px; }
+.footer-brand { display: block; width: 105px; height: 54px; object-fit: contain; margin-bottom: 22px; }
+.rating-label { font-size: 17px; color: #3e4b91; margin-bottom: 13px; font-weight: 700; }
+.rating-label small { display: block; font-size: 9px; color: #888; font-weight: 400; margin-top: 3px; }
+.footer-column h3 { font-size: 14px; margin: 4px 0 15px; }
+.footer-column a { display: block; color: #171717; text-decoration: none; font-size: 11px; margin-bottom: 9px; }
+.footer-column a:hover { color: #e6a000; }
+.connect a { margin-bottom: 3px; }
+.connect img { max-width: 82px; height: 22px; object-fit: contain; object-position: left center; }
+
+/* Responsive design */
+@media (max-width: 760px) {
+    .site-header { height: 68px; padding: 0 22px; border-left-width: 5px; }
+    .brand img { width: 88px; }
+    .menu-toggle { display: block; }
+    .navigation { display: none; position: absolute; z-index: 10; top: 65px; left: 0; right: 0; background-color: #fff; padding: 15px 22px; flex-wrap: wrap; box-shadow: 0 5px 10px #00000010; }
+    .navigation.show { display: flex; }
+    .hero { height: 470px; padding: 45px 25px 0; align-items: flex-start; border-left-width: 5px; }
+    .hero-copy { width: 100%; max-width: none; }
+    .hero-copy h1 { font-size: 29px; white-space: normal; }
+    .hero-copy h2 { font-size: 27px; margin-bottom: 15px; white-space: normal; }
+    .hero-copy p { max-width: 95%; margin-bottom: 20px; }
+    .hero-art { width: 72%; height: 52%; right: 4%; bottom: 0; opacity: .96; }
+    .section { padding-left: 22px; padding-right: 22px; }
+    .project-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; }
+    .project-card > img { height: 140px; }
+    .recommendation-grid { grid-template-columns: 1fr; gap: 12px; }
+    .review-card { min-height: 0; }
+    .contact-section { padding: 15px 22px 0; grid-template-columns: 1fr; }
+    .contact-section h2 { margin-bottom: 15px; }
+    .partners { padding: 35px 22px; gap: 20px; flex-wrap: wrap; justify-content: flex-start; }
+    .footer { padding: 10px 22px 35px; grid-template-columns: repeat(2, 1fr); gap: 25px; }
+}
+
+@media (max-width: 430px) {
+    .hero { height: 445px; }
+    .hero-copy h1 { font-size: 26px; }
+    .hero-copy h2 { font-size: 24px; }
+    .project-grid { grid-template-columns: 1fr; }
+    .project-card > img { height: 190px; }
+    .desktop-only { display: none; }
+    .footer { grid-template-columns: 1fr 1fr; }
+}
